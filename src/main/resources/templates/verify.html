@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8"/>
+    <link href="../css/bootstrap.css" rel="stylesheet"/>
+    <script src="../jquery/jquery-3.3.1.min.js" type="text/javascript"/>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../js/verify.js" type="text/javascript"></script>
+    <title>验证页面</title>
+</head>
+<body>
+    <form action="/loginsuccess" method="post" onsubmit="return check(this)">
+        <span>手机号码</span><input type="text" value="" name="phoneNumber" id="phoneNumber"/><br/>
+        <span>获取验证码</span><input type="text" value="" name="phoneNumber" id="verifyNumber"/><br/>
+        <input type="submit" value="手机登录"/>
+    </form>
+    <button class="" onclick="getVerify()">获取验证码</button>
+</body>
+</html>
