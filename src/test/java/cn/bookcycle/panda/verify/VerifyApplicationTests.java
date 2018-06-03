@@ -22,12 +22,6 @@ public class VerifyApplicationTests {
 
 	@Test
 	public void setSimpleMail() throws Exception{
-		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("bookbridge@163.com");
-		message.setTo("793893252@qq.com");
-		message.setSubject("主题：简单邮件");
-		message.setText("测试邮件内容:他大舅大二舅都是他舅");
-
-		mailSender.send(message);
+		
 	}
 }
