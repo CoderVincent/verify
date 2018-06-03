@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class phoneController {
-    @RequestMapping(value = "/message/phoneVerify",method = RequestMethod.POST)
-    public String phoneVerify(@RequestParam("verifyCode") String verifyCode,
-                              @RequestParam("phoneNumber") String phoneNumber) throws Exception{
-        SmsVoiceVerifyCodeSender smsVoiceVerifyCodeSender = new SmsVoiceVerifyCodeSender(AppConstant.appid,AppConstant.appkey);
-        SmsVoiceVerifyCodeSenderResult result = null;
-        result = smsVoiceVerifyCodeSender.send("86",phoneNumber,verifyCode,2,"");
+//     @RequestMapping(value = "/message/phoneVerify",method = RequestMethod.POST)
+//     public String phoneVerify(@RequestParam("verifyCode") String verifyCode,
+//                               @RequestParam("phoneNumber") String phoneNumber) throws Exception{
+//         SmsVoiceVerifyCodeSender smsVoiceVerifyCodeSender = new SmsVoiceVerifyCodeSender(AppConstant.appid,AppConstant.appkey);
+//         SmsVoiceVerifyCodeSenderResult result = null;
+//         result = smsVoiceVerifyCodeSender.send("86",phoneNumber,verifyCode,2,"");
 
-        System.out.println(result);
-        return result.toString();
-    }
+//         System.out.println(result);
+//         return result.toString();
+//     }
 }
