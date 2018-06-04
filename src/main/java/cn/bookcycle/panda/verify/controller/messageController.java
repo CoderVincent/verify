@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class messageController {
     @RequestMapping(value = "/login")
     public String verifycode(){
-        return "verify";
+        return "test1";
     }
 
     @RequestMapping(value = "/loginsuccess")
