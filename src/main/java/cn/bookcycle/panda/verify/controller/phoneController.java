@@ -23,6 +23,6 @@ public class phoneController {
   
     @RequestMapping("/helloAAA")
     public String helloAAA(){
-      return "ss"
+      return "ss";
     }
 }
