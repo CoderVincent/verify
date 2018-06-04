@@ -1,6 +1,6 @@
 package cn.bookcycle.panda.verify.controller;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
