@@ -20,4 +20,9 @@ public class phoneController {
 //         System.out.println(result);
 //         return result.toString();
 //     }
+  
+    @RequestMapping("/helloAAA")
+    public String helloAAA(){
+      return "ss"
+    }
 }
