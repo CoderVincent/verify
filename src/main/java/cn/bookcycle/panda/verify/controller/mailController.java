@@ -12,22 +12,22 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class mailController {
 
-//     @Autowired
-//     private JavaMailSender mailSender;
+     @Autowired
+     private JavaMailSender mailSender;
 
-//     @Value("${spring.mail.username}")
-//     private String EmailAddress;
+     @Value("${spring.mail.username}")
+     private String EmailAddress;
 
-//     @RequestMapping(value = "/sendSimpleMail" , method = RequestMethod.POST)
-//     public String sendSimpleMail(@RequestParam("verifyCode") String verifyCode,
-//                                  @RequestParam("emailAddress") String emailAddress){
-//         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-//         simpleMailMessage.setFrom(EmailAddress);
-//         simpleMailMessage.setTo(emailAddress);
-//         simpleMailMessage.setSubject("主题：邮箱验证");
-//         simpleMailMessage.setText("验证码:"+verifyCode+",5分钟内填写有效");
+     @RequestMapping(value = "/sendSimpleMail" , method = RequestMethod.POST)
+     public String sendSimpleMail(@RequestParam("verifyCode") String verifyCode,
+                                  @RequestParam("emailAddress") String emailAddress){
+         SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+         simpleMailMessage.setFrom(EmailAddress);
+         simpleMailMessage.setTo(emailAddress);
+         simpleMailMessage.setSubject("主题：邮箱验证");
+         simpleMailMessage.setText("验证码:"+verifyCode+",5分钟内填写有效");
 
-//         mailSender.send(simpleMailMessage);
-//         return "success";
-//     }
+         mailSender.send(simpleMailMessage);
+         return "success";
+     }
 }
